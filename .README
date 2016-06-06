@@ -1,0 +1,8 @@
+Add this lines to your .bash_profile
+
+
+BASH_FILE="$HOME/Documents/workspace/bash_profile/scripts/.bashrc"
+
+if [ -f $BASH_FILE ]; then
+  . $BASH_FILE
+fi

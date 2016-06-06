@@ -1,23 +1,26 @@
 # Overview
-This is a .bash code that prompts a dialog to select commands and execute them in a shell.
+This is my personal simple .bashrc code that prompts a dialog to select commands and execute them in a shell.
 Sorry, Mac only.
 
 ## Using it
 
-1 - Configure your commands at: scripts/.bashrc following some examples over there.
-> Note that you can also use icons into Cocoa alerts.
+1 - Customize your commands at: /bash_profile/scripts/.bashrc, following the 3 steps over there.
+> Note: you can also use icons into Cocoa alerts.
+
 
 2 - Just type hub on your terminal and it will prompts a list of actions to being executed. 
 
 
 ## How to install 
-Please, install CocoaDialog app on your Mac: 
+Please, install CocoaDialog app on your Mac's Application Folder: 
 
 >
 https://mstratman.github.io/cocoadialog/
 
 
-Add these following lines to your .bash_profile
+run the script: scripts > install.sh 
+
+Or run this code at your own:
 
 ```bash
 BASH_FILE="{ YOUR_PATH_TO_BASH_PROFILE_INSTALLATION }/bash_profile/scripts/.bashrc"
@@ -29,8 +32,9 @@ fi
 
 
 
-### Authors/Contributers
-- Romulo Bordezani
+### NOTICE
+- It is for my personal use, so you will see my git completion Romulo Bordezani
+- There is a git 
 
 
 

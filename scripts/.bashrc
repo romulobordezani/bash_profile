@@ -3,7 +3,6 @@ popup_message(){
 	CD_APP="$HOME/Applications/CocoaDialog.app"
 	CD="$CD_APP/Contents/MacOS/CocoaDialog"
 
-	### Changing the colors and icon
 	$CD bubble --debug --title "$1" \
     --timeout 2 \
 	--text "$2" \
@@ -15,17 +14,7 @@ popup_message(){
 
 }
 
-# Git branch in prompt.
-parse_git_branch() {
-    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
-}
-
-export PS1="\u@\h \W\[\033[32m\]\$(parse_git_branch)\[\033[00m\] $ "
-
-if [ -f ~/.git-completion.bash ]; then
-  . ~/.git-completion.bash
-fi
-
+### STEP 1 - Add bash functions here as you wish and DO the STEP 2 in the last function called "hub"
 
 start_redis(){
   redis-server
@@ -76,6 +65,10 @@ hub(){
 
 	CD="$HOME/Applications/CocoaDialog.app/Contents/MacOS/CocoaDialog"
 
+
+	### STEP 2 - Feed the items list with the options that will appear in the Dialog. Ex. --items "Option 1" "Option 2" "Option 3"
+	# Don't remove the tail-1, to get the choosen option
+
 	rv=`$CD dropdown\
 	--button1 "Run" \
 	--string-output \
@@ -83,6 +76,10 @@ hub(){
 	--title "__--== Command Hub ==--__"\
 	--text "What do you want to run?" \
 	--items "Linklist" "Watch Theme" "Watch Pages" "AMqueue" "Redis" "ngrok" "ssh prod" "ssh stg"  |tail -1`
+
+
+
+    ### STEP 3 - Associate the items to functions
 
 
 	if [[ "$rv" == 'Linklist' ]]; then

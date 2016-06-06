@@ -33,8 +33,8 @@ fi
 
 
 ### NOTICE
-- It is for my personal use, so you will see my git completion Romulo Bordezani
-- There is a git 
+- It is for my personal use so, you will see some commands of mine over there if you just clone it without to make your own fork.
+Please, fork it or make a .bkp of your commands before to update.
 
 
 

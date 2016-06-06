@@ -5,6 +5,7 @@ Sorry, Mac only.
 ## Using it
 
 1 - Configure your commands at: scripts/.bashrc following some examples over there.
+> Note that you can also use icons into Cocoa alerts.
 
 2 - Just type hub on your terminal and it will prompts a list of actions to being executed. 
 
